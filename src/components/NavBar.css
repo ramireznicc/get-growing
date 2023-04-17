@@ -1,0 +1,51 @@
+.NavBar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--green);
+  margin-bottom: 10px;
+  width: 100%;
+  padding:0px 10px;
+}
+
+.NavBar--div{
+  text-align: center;
+}
+
+.NavBar--h2{
+  font-size: 40px;
+  color: var(--white);
+  text-shadow: 0.5px 0.5px 1.5px rgba(0, 0, 0, 0.5);
+}
+
+.NavBar--h6{
+  font-size: 15px;
+  color: var(--beige);
+  text-shadow: 0.5px 0.5px 1.5px rgba(0, 0, 0, 0.5);
+}
+
+.NavBar--ul{
+  display: flex;
+}
+
+.NavBar--ul li{
+  padding: 4px 15px;
+  font-size: 18px;
+  transition: 0.5s;
+}
+
+.NavBar--ul li a{
+  color: var(--beige);
+  transition: 0.5s;
+}
+
+.NavBar--ul li a:hover{
+  color: var(--beige);
+  text-shadow: 0.5px 0.5px 0.5px var(--dark-green);
+  text-decoration: underline;
+}
+
+.NavBar--ul li:hover{
+  transform: scale(1.05);
+} 
+

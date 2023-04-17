@@ -1,0 +1,13 @@
+.CartWidget{
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.CartWidget:hover{
+  transform: scale(1.15);
+}
+
+.CartWidget span{
+  font-size: 20px;
+  padding: 5px;
+}
