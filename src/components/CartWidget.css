@@ -1,13 +1,20 @@
 .CartWidget{
   cursor: pointer;
-  transition: 0.5s;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(to right, var(--medium-green), var(--dark-green));
+  border-radius: 100px;
+  padding: 8px 8px;
 }
 
-.CartWidget:hover{
-  transform: scale(1.15);
+.CartWidget--icon{
+  font-size: 1.2rem;
+  color: var(--beige);
+  padding-right: 8px;
 }
 
 .CartWidget span{
-  font-size: 20px;
-  padding: 5px;
+  font-size: 1.1rem;
+  color: var(--beige);
 }

@@ -1,14 +1,16 @@
 import React from "react";
 import { CartWidget } from "./CartWidget";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLeaf } from '@fortawesome/free-solid-svg-icons'
+
 import './NavBar.css'
 
 export const NavBar = () => {
   return(
     <header className="NavBar">
       <div className="NavBar--div">
-        <i class="fa-solid fa-leaf"></i>
+        <FontAwesomeIcon className="NavBar--icon" icon={faLeaf}/>
         <h2 className="NavBar--h2">getGrowing</h2>
-        <h6 className="NavBar--h6">Plants Boutique</h6>
       </div>
       <nav>
         <ul className="NavBar--ul">
@@ -16,9 +18,9 @@ export const NavBar = () => {
           <li><a href="#">Seeds</a></li>
           <li><a href="#">Plantpots</a></li>
           <li><a href="#">Sprinklers</a></li>
+          <li><CartWidget counter={11}/></li>
         </ul>
       </nav>
-      <CartWidget counter={11}/>
     </header>
   )
 }

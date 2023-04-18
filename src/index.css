@@ -2,15 +2,17 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
   text-decoration: none;
   list-style: none;
 }
 
 :root{
-  --white: #eee;
-  --dark-green: #202e32;
-  --medium-green: #586c5c;
-  --green: #85937a;
-  --beige: #dfdcb9;
+  --white: #eeeeee;
+  --brown: #2f2415;
+  --dark-green: #353527;
+  --medium-green: rgb(85, 85, 63);
+  --green: #a1ae25;
+  --beige: #f2e8cf;
+  --ubuntu-mono: 'Ubuntu Mono', monospace;
 }
