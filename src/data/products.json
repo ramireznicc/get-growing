@@ -1,0 +1,178 @@
+[
+  {
+    "id": 1,
+    "name": "Cactus",
+    "category": "Plants",
+    "price": "4.99",
+    "description": "Los cactus son Plants suculentas con o sin espinas las cuales pertenecen a la familia Cactaceae y son capaces de almacenar grandes cantidades de agua en su cuerpo. La familia Cactaceae cuenta con 200 géneros y unas 2500 especies.",
+    "stock": 77
+  },
+  {
+    "id": 2,
+    "name": "Bonsai",
+    "category": "Plants",
+    "price": "16.99",
+    "description": "Un bonsái es un árbol miniaturizado cultivado en una maceta. Su tamaño y forma se controlan mediante poda y entrenamiento. Un bonsái puede ser una obra de arte viva y puede transmitir un sentido de calma y tranquilidad.",
+    "stock": "34"
+  },
+  {
+    "id": 3,
+    "name": "Lemon Tree",
+    "category": "Plants",
+    "price": "12.49",
+    "description": "Un limonero es un árbol de hoja perenne que produce frutos cítricos redondos y amarillos llamados limones. Necesita mucho sol y agua para crecer y prosperar. Sus hojas son verdes brillantes y tienen un aroma fresco y cítrico. El limonero es una fuente popular de vitamina C y se utiliza en una variedad de platos y bebidas.",
+    "stock": "29"
+  },
+  {
+    "id": 4,
+    "name": "Aloe Vera",
+    "category": "Plants",
+    "price": "6.50",
+    "description": "El aloe vera es una planta suculenta que se utiliza comúnmente para tratar quemaduras y heridas menores debido a sus propiedades curativas. Tiene hojas gruesas y verdes con bordes dentados y puede crecer hasta un metro de altura. Es fácil de cuidar y requiere poca agua, lo que lo convierte en una opción popular para los jardineros principiantes.",
+    "stock": "73"
+  },
+  {
+    "id": 5,
+    "name": "Ficus",
+    "category": "Plants",
+    "price": "11.99",
+    "description": "El ficus es un árbol de hoja perenne con un follaje denso y brillante que puede crecer hasta 30 metros de altura. Es popular como planta de interior debido a su capacidad para adaptarse a condiciones de luz y humedad variables. También se puede cultivar al aire libre en climas cálidos. El ficus produce pequeñas flores y frutos en forma de higos, y sus hojas son a menudo utilizadas para la decoración de interiores. Sin embargo, hay que tener cuidado con su cuidado ya que puede ser susceptible a la sobrehidratación y la poda incorrecta puede dañar su forma natural.",
+    "stock": "22"
+  },
+  {
+    "id": 6,
+    "name": "Orchids",
+    "category": "Plants",
+    "price": "7.75",
+    "description": "Las orquídeas son Plants exóticas y elegantes que producen flores coloridas y complejas. Hay más de 25,000 especies de orquídeas que varían en tamaño y color. Las orquídeas son populares como Plants de interior debido a su belleza y fragancia única. También son comunes en la industria de la floristería para arreglos florales y bodas. Requieren un cuidado especializado, como una humedad adecuada y una exposición limitada a la luz solar directa.",
+    "stock": "31"
+  },
+  {
+    "id": 7,
+    "name": "Fern",
+    "category": "Plants",
+    "price": "9.30",
+    "description": "Los helechos son Plants sin flores que se caracterizan por sus hojas grandes y verdes llamadas frondas. Son populares como Plants de interior debido a su capacidad para purificar el aire y agregar un toque de naturaleza a cualquier espacio. Los helechos son relativamente fáciles de cuidar, pero requieren un ambiente húmedo y sombreado para crecer correctamente. Son comunes en jardines de sombra y también se utilizan en la decoración de interiores como colgantes o en macetas.",
+    "stock": "17"
+  },
+  {
+    "id": 8,
+    "name": "Cactus Seeds",
+    "category": "Seeds",
+    "price": "0.90",
+    "description": "",
+    "stock": "123"
+  },
+  {
+    "id": 9,
+    "name": "Bonsai Seeds",
+    "category": "Seeds",
+    "price": "1.20",
+    "description": "",
+    "stock": "89"
+  },
+  {
+    "id": 10,
+    "name": "Lemon Seeds",
+    "category": "Seeds",
+    "price": "0.25",
+    "description": "",
+    "stock": "188"
+  },
+  {
+    "id": 11,
+    "name": "Aloe Vera Seeds",
+    "category": "Seeds",
+    "price": "0.95",
+    "description": "",
+    "stock": "66"
+  },
+  {
+    "id": 12,
+    "name": "Ficus Seeds",
+    "category": "Seeds",
+    "price": "0.65",
+    "description": "",
+    "stock": "48"
+  },
+  {
+    "id": 13,
+    "name": "Orchids Seeds",
+    "category": "Seeds",
+    "price": "0.70",
+    "description": "",
+    "stock": "69"
+  },
+  {
+    "id": 14,
+    "name": "Fern Spores",
+    "category": "Seeds",
+    "price": "0.35",
+    "description": "",
+    "stock": "45"
+  },
+  {
+    "id": 15,
+    "name": "Plastic",
+    "category": "Plantpots",
+    "price": "3.50",
+    "description": "",
+    "stock": "22"
+  },
+  {
+    "id": 16,
+    "name": "Mini",
+    "category": "Plantpots",
+    "price": "2.75",
+    "description": "",
+    "stock": "16"
+  },
+  {
+    "id": 17,
+    "name": "Wicker XL",
+    "category": "Plantpots",
+    "price": "9.95",
+    "description": "",
+    "stock": "11"
+  },
+  {
+    "id": 18,
+    "name": "Terracotta",
+    "category": "Plantpots",
+    "price": "7.20",
+    "description": "",
+    "stock": "24"
+  },
+  {
+    "id": 19,
+    "name": "Oscillating",
+    "category": "Sprinklers",
+    "price": "25.40",
+    "description": "",
+    "stock": "7"
+  },
+  {
+    "id": 20,
+    "name": "Manual",
+    "category": "Sprinklers",
+    "price": "14.30",
+    "description": "",
+    "stock": "15"
+  },
+  {
+    "id": 21,
+    "name": "Manual Refill",
+    "category": "Sprinklers",
+    "price": "5.30",
+    "description": "",
+    "stock": "21"
+  },
+  {
+    "id": 22,
+    "name": "Premium",
+    "category": "Sprinklers",
+    "price": "42.50",
+    "description": "",
+    "stock": "9"
+  }
+]

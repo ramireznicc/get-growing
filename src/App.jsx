@@ -1,12 +1,13 @@
-import './App.css';
-import { NavBar } from './components/NavBar';
-import { ItemListContainer } from './components/sections/ItemListContainer';
+import "./App.css";
+import { NavBar } from "./components/NavBar/NavBar";
+
+import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
 
 function App() {
   return (
     <div className="App">
       <NavBar />
-      <ItemListContainer greeting={'Welcome to getGrowing plants boutique.'} />
+      <ItemListContainer />
     </div>
   );
 }

@@ -1,0 +1,12 @@
+.CartWidget {
+  display: flex;
+  align-items: center;
+  color: var(--light-green);
+  font-size: 1.2rem;
+  gap: 8px;
+  transition: all 0.3s ease-out;
+}
+
+.CartWidget:hover {
+  color: var(--yellow);
+}

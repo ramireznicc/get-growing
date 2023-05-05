@@ -1,18 +1,22 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+  font-family: "Hind", sans-serif;
   text-decoration: none;
   list-style: none;
+  -webkit-font-smoothing: antialiased;
 }
 
-:root{
-  --white: #eeeeee;
-  --brown: #2f2415;
-  --dark-green: #353527;
-  --medium-green: rgb(85, 85, 63);
-  --green: #a1ae25;
-  --beige: #f2e8cf;
-  --ubuntu-mono: 'Ubuntu Mono', monospace;
+:root {
+  --light-grey: #3b3b3b;
+  --grey: #282828;
+  --yellow: #ffef9f;
+  --light-green: #c1fba4;
+  --green: #7bf1a8;
+  --white: #eee;
+}
+
+html {
+  scroll-behavior: smooth;
 }
