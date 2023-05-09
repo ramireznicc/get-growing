@@ -1,6 +1,6 @@
 # GIF mostrando funcionalidad de rutas de navegación
 
-[GIF](./public/images/get-growing.gif)
+![GIF](./public/images/get-growing.gif)
 
 # Getting Started with Create React App
 
