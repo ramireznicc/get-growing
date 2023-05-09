@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import { ItemList } from "../ItemList/ItemList";
 import products from "../../data/products.json";
+import { Container } from "../../sections/Container";
 
-export const ItemListContainer = () => {
+export const ItemListContainer = ({ onAdd }) => {
+  const { id } = useParams();
   const [list, setList] = useState([]);
 
   useEffect(() => {
@@ -11,12 +14,19 @@ export const ItemListContainer = () => {
         resolve(products);
       }, 2000);
     });
-    productList.then((result) => setList(result));
-  }, []);
+    productList.then((result) => {
+      if (id) {
+        const productsFiltered = result.filter((item) => item.category === id);
+        setList(productsFiltered);
+      } else {
+        setList(result);
+      }
+    });
+  }, [id]);
 
   return (
-    <>
-      <ItemList list={list} />
-    </>
+    <Container>
+      <ItemList onAdd={onAdd} list={list} />
+    </Container>
   );
 };

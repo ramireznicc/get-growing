@@ -1,33 +1,30 @@
 import { useState } from "react";
 import { Button } from "../Button/Button";
-import "./ItemAddCounter.css";
+import "./ItemCount.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { faMinus } from "@fortawesome/free-solid-svg-icons";
 
-const ItemAddCounter = () => {
-  const stock = 14;
+export const ItemCount = ({ onAdd, stock, itemName, category }) => {
   const [counter, setCounter] = useState(0);
+  const itemStock = stock;
 
   const handlerIncrease = () => {
-    if (counter < stock) {
-      setCounter((prev) => prev + 1);
-    }
+    if (counter < itemStock) setCounter((prev) => prev + 1);
   };
 
   const handlerDecrease = () => {
-    if (counter > 0) {
-      setCounter((prev) => prev - 1);
-    }
+    if (counter > 0) setCounter((prev) => prev - 1);
   };
 
   const handlerAdded = () => {
+    onAdd(counter, itemName, category);
     setCounter(0);
   };
 
   return (
-    <div className="ItemAddCounter">
-      <div className="ItemAddCounter--to-add">
+    <div className="ItemCount">
+      <div className="ItemCount--to-add">
         <Button onPress={handlerDecrease}>
           <FontAwesomeIcon icon={faMinus} />
         </Button>
@@ -40,5 +37,3 @@ const ItemAddCounter = () => {
     </div>
   );
 };
-
-export { ItemAddCounter };

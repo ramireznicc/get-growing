@@ -1,4 +1,4 @@
-.ItemAddCounter {
+.ItemCount {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6,7 +6,7 @@
   padding: 10px;
 }
 
-.ItemAddCounter--to-add {
+.ItemCount--to-add {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -16,9 +16,4 @@
   border-radius: 4px;
   color: var(--light-grey);
   font-size: 1.15rem;
-}
-
-.addedToCart {
-  width: 220px;
-  text-align: center;
 }

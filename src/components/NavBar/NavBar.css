@@ -11,7 +11,6 @@
 }
 
 .NavBar {
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -20,13 +19,16 @@
   height: 70px;
   border-bottom: solid 1px var(--yellow);
   padding: 0 30px;
+  overflow: hidden;
+  position: fixed;
+  z-index: 1;
 }
 
 .NavBar--div {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 0px;
+  padding: 10px 20px;
   height: 70px;
 }
 
@@ -36,8 +38,8 @@
   background-color: var(--grey);
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.6);
   padding-right: 7px;
-  border-radius: 100%;
-  padding: 8px 8px;
+  border-radius: 50%;
+  padding: 8px;
 }
 
 .NavBar--h2 {
@@ -45,13 +47,15 @@
   font-size: 1.6rem;
   color: var(--light-green);
   padding: 0px 0px 0px 10px;
-  transition: all 0.3s ease-out;
   cursor: pointer;
   animation: grow 4s ease 0.3s infinite;
-  letter-spacing: 0px;
 }
 
 .NavBar--h2:hover {
+  color: var(--yellow);
+}
+
+.NavBar--h2.active {
   color: var(--yellow);
 }
 
@@ -59,26 +63,27 @@
   height: 70px;
   display: flex;
   align-items: center;
-  padding: 10px 0px;
+  padding: 10px 0;
 }
 
 .NavBar--ul li {
-  font-weight: 400;
-  font-size: 1.1rem;
+  padding: 0 20px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  padding: 0px 20px;
-  transition: 0.5s ease-out;
-}
-
-.NavBar--ul li a {
-  color: var(--yellow);
-  transition: 0.5s ease-out;
-}
-
-.NavBar--ul li a:hover {
-  color: var(--light-green);
 }
 
 .NavBar--ul li:hover {
-  transform: scale(1.15);
+  transform: scale(1.05);
+}
+
+a {
+  color: var(--yellow);
+}
+
+a:hover {
+  color: var(--light-green);
+}
+
+.active {
+  color: var(--light-green);
 }
