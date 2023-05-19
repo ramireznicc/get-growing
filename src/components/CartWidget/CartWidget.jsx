@@ -1,15 +1,14 @@
 import React from "react";
-import './CartWidget.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
-
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import Badge from "@mui/material/Badge";
+import { IconButton } from "@mui/material";
 
 export const CartWidget = () => {
-
-  return(
-    <div className="CartWidget">
-      <FontAwesomeIcon className="CartWidget--icon" icon={faCartShopping} />
-      <span>0</span>
-    </div>
-  )
-} 
+  return (
+    <IconButton>
+      <Badge overlap="rectangular" badgeContent={2} color="secondary">
+        <ShoppingCartIcon color="primary" />
+      </Badge>
+    </IconButton>
+  );
+};

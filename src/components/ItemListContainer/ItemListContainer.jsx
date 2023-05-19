@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { ItemList } from "../ItemList/ItemList";
 import products from "../../data/products.json";
-import { Container } from "../../sections/Container";
+import { Container } from "@mui/material";
 
 export const ItemListContainer = ({ onAdd }) => {
   const { id } = useParams();
@@ -25,7 +25,15 @@ export const ItemListContainer = ({ onAdd }) => {
   }, [id]);
 
   return (
-    <Container>
+    <Container
+      maxWidth="xl"
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        flexWrap: "wrap",
+      }}
+    >
       <ItemList onAdd={onAdd} list={list} />
     </Container>
   );

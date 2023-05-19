@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { Button } from "../Button/Button";
+import { Button, IconButton } from "@mui/material";
 import "./ItemCount.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
-import { faMinus } from "@fortawesome/free-solid-svg-icons";
+import AddCircleIcon from "@mui/icons-material/AddCircle";
+import RemoveCircleIcon from "@mui/icons-material/RemoveCircle";
 
 export const ItemCount = ({ onAdd, stock, itemName, category }) => {
   const [counter, setCounter] = useState(0);
@@ -22,18 +22,32 @@ export const ItemCount = ({ onAdd, stock, itemName, category }) => {
     setCounter(0);
   };
 
+  const checkCount = () => {
+    if (counter === 0) {
+      return true;
+    }
+  };
+
   return (
     <div className="ItemCount">
       <div className="ItemCount--to-add">
-        <Button onPress={handlerDecrease}>
-          <FontAwesomeIcon icon={faMinus} />
-        </Button>
+        <IconButton onClick={handlerDecrease}>
+          <RemoveCircleIcon color="primary" />
+        </IconButton>
         <span>{counter}</span>
-        <Button onPress={handlerIncrease}>
-          <FontAwesomeIcon icon={faPlus} />
-        </Button>
+        <IconButton color="background.paper" onClick={handlerIncrease}>
+          <AddCircleIcon color="primary" />
+        </IconButton>
       </div>
-      <Button onPress={handlerAdded}>Add to cart</Button>
+      <Button
+        disabled={checkCount()}
+        variant="outlined"
+        color="secondary"
+        onClick={handlerAdded}
+        sx={{ borderRadius: "12px" }}
+      >
+        Add to cart
+      </Button>
     </div>
   );
 };

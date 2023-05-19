@@ -2,11 +2,10 @@ import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import products from "../../data/products.json";
 import { ItemDetail } from "../ItemDetail/ItemDetail";
-import { Container } from "../../sections/Container";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
-import { Button } from "../Button/Button";
+import { Container } from "@mui/material";
+import { IconButton } from "@mui/material";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 
 export const ItemDetailContainer = ({ onAdd }) => {
   const { id } = useParams();
@@ -37,18 +36,36 @@ export const ItemDetailContainer = ({ onAdd }) => {
   };
 
   return (
-    <Container>
-      <Link to={onPreviousItem()}>
-        <Button>
-          <FontAwesomeIcon fontSize={"3rem"} icon={faArrowLeft} />
-        </Button>
-      </Link>
+    <Container
+      fixed
+      disableGutters
+      sx={{
+        overflow: "auto",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        py: "20px",
+      }}
+    >
+      <IconButton
+        LinkComponent={Link}
+        to={onPreviousItem()}
+        size="large"
+        sx={{ display: { md: "flex", xs: "none" }, mr: "16px" }}
+        color="secondary"
+      >
+        <ChevronLeftIcon fontSize="large" />
+      </IconButton>
       <ItemDetail item={item} onAdd={onAdd} />
-      <Link to={onNextItem()}>
-        <Button>
-          <FontAwesomeIcon fontSize={"3rem"} icon={faArrowRight} />
-        </Button>
-      </Link>
+      <IconButton
+        size="large"
+        LinkComponent={Link}
+        to={onNextItem()}
+        sx={{ display: { md: "flex", xs: "none" }, ml: "16px" }}
+        color="secondary"
+      >
+        <ChevronRightIcon fontSize="large" />
+      </IconButton>
     </Container>
   );
 };

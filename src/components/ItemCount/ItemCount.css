@@ -11,9 +11,13 @@
   align-items: center;
   justify-content: space-between;
   padding: 0px 5px;
-  background-color: var(--light-green);
+  background-color: var(--grey);
   height: 45px;
-  border-radius: 4px;
+  border-radius: 12px;
   color: var(--light-grey);
   font-size: 1.15rem;
+}
+
+.ItemCount span {
+  color: var(--yellow);
 }
