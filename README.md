@@ -1,9 +1,11 @@
-
 # getGrowing / Pants Boutique
 
-get Growing is an application developed with ReactJS. 
+get Growing is an application developed with ReactJS.
 It is an e-commerce model, allowing users to navigate through the different categories and products, see their details and add them to the cart. At the end of the shopping experience, the users' data is requested through a form and if everything is correct, they are shown the ID of their purchase order.
 
+## Live Preview
+
+Try it!: https://get-growing.netlify.app/
 
 ## Tech Stack
 
@@ -36,8 +38,6 @@ It is an e-commerce model, allowing users to navigate through the different cate
 ![phone-3](https://firebasestorage.googleapis.com/v0/b/get-growing-plants.appspot.com/o/screenshots%2Fphone-3.png?alt=media&token=e99e66ce-00d8-45ea-9cda-e17692c2b103)
 
 ![phone-4](https://firebasestorage.googleapis.com/v0/b/get-growing-plants.appspot.com/o/screenshots%2Fphone-4.png?alt=media&token=3a5025a2-4be8-4e8d-a614-7089cbbbbc80)
-
-
 
 ## Contact
 
