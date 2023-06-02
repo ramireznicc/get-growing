@@ -7,7 +7,6 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
@@ -55,7 +54,25 @@ export const NavBar = () => {
               <h2 className="NavBar--h2">getGrowing</h2>
             </NavLink>
           </Box>
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+          <Box
+            sx={{
+              display: { xs: "flex", md: "none" },
+            }}
+          >
+            {" "}
+            <NavLink to="/">
+              <h2 className="NavBar--h2">getGrowing</h2>
+            </NavLink>
+          </Box>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "flex", md: "none" },
+              justifyContent: "flex-end",
+              gap: "8px",
+            }}
+          >
+            <CartWidget />
             <IconButton
               size="small"
               aria-label="account of current user"
@@ -88,7 +105,7 @@ export const NavBar = () => {
                 <MenuItem
                   sx={{
                     textTransform: "uppercase",
-                    fontSize: "1.2rem",
+                    fontSize: "1rem",
                     letterSpacing: ".2rem",
                   }}
                   key={item}
@@ -98,20 +115,8 @@ export const NavBar = () => {
                 </MenuItem>
               ))}
             </Menu>
-            <Box sx={{ display: "flex", alignItems: "center", px: "16px" }}>
-              <CartWidget />
-            </Box>
           </Box>
-          <Box
-            sx={{
-              display: { xs: "flex", md: "none" },
-              alignItems: "flex-end",
-            }}
-          >
-            <NavLink to="/">
-              <h2 className="NavBar--h2">getGrowing</h2>
-            </NavLink>
-          </Box>
+
           <Box
             sx={{
               flexGrow: 1,

@@ -1,74 +1,48 @@
-# GIF mostrando funcionalidad de rutas de navegación
 
-![GIF](./public/images/get-growing.gif)
+# getGrowing / Pants Boutique
 
-# Getting Started with Create React App
+get Growing is an application developed with ReactJS. 
+It is an e-commerce model, allowing users to navigate through the different categories and products, see their details and add them to the cart. At the end of the shopping experience, the users' data is requested through a form and if everything is correct, they are shown the ID of their purchase order.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Tech Stack
 
-In the project directory, you can run:
+- React JS
+- Material UI (CSS Framework)
+- FireBase
 
-### `npm start`
+## Screenshots
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Computer view
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![computer-1](https://firebasestorage.googleapis.com/v0/b/get-growing-plants.appspot.com/o/screenshots%2Fbrowser-2.png?alt=media&token=ffd1b853-04ad-41e4-aba5-86e63e33bbb9)
 
-### `npm test`
+![computer-2](https://firebasestorage.googleapis.com/v0/b/get-growing-plants.appspot.com/o/screenshots%2Fbrowser-3.png?alt=media&token=404b83eb-c5db-4617-a40b-2702a5e72fa6)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![computer-3](https://firebasestorage.googleapis.com/v0/b/get-growing-plants.appspot.com/o/screenshots%2Fbrowser-4.png?alt=media&token=7d5cda5c-5278-4f75-81fd-6e80c56a96a8)
 
-### `npm run build`
+![computer-4](https://firebasestorage.googleapis.com/v0/b/get-growing-plants.appspot.com/o/screenshots%2Fbrowser-5.png?alt=media&token=19aeab0c-f179-4979-996f-95444c893196)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![computer-5](https://firebasestorage.googleapis.com/v0/b/get-growing-plants.appspot.com/o/screenshots%2Fbrowser-6.png?alt=media&token=dc0c20d5-d390-4f8d-9090-be406d241154)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![computer-6](https://firebasestorage.googleapis.com/v0/b/get-growing-plants.appspot.com/o/screenshots%2Fbrowser-7.png?alt=media&token=96deb10f-b712-4373-9adc-e0dbbd5c3222)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Phone view
 
-### `npm run eject`
+![phone-1](https://firebasestorage.googleapis.com/v0/b/get-growing-plants.appspot.com/o/screenshots%2Fphone-1.png?alt=media&token=e65b7cea-c88a-4d3b-ba64-93eb19e55796)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![phone-2](https://firebasestorage.googleapis.com/v0/b/get-growing-plants.appspot.com/o/screenshots%2Fphone-2.png?alt=media&token=1e895c68-a77f-4919-aafe-806e02fa0133)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![phone-3](https://firebasestorage.googleapis.com/v0/b/get-growing-plants.appspot.com/o/screenshots%2Fphone-3.png?alt=media&token=e99e66ce-00d8-45ea-9cda-e17692c2b103)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![phone-4](https://firebasestorage.googleapis.com/v0/b/get-growing-plants.appspot.com/o/screenshots%2Fphone-4.png?alt=media&token=3a5025a2-4be8-4e8d-a614-7089cbbbbc80)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contact
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Nicolás Ramirez
 
-### Code Splitting
+- website: https://ramireznicc.github.io
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- email: ramireznicc.23@gmail.com

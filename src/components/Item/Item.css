@@ -78,7 +78,6 @@
 }
 
 .Item--price {
-  margin-top: 6px;
   font-size: 1.8rem;
   color: var(--yellow);
   letter-spacing: 4px;

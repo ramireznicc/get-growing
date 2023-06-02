@@ -1,27 +1,42 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { ItemList } from "../ItemList/ItemList";
-import products from "../../data/products.json";
 import { Container } from "@mui/material";
+import CircularProgress from "@mui/material/CircularProgress";
 
-export const ItemListContainer = ({ onAdd }) => {
+import { getFirestore, collection, getDocs } from "firebase/firestore";
+
+export const ItemListContainer = () => {
   const { id } = useParams();
   const [list, setList] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const productList = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(products);
-      }, 2000);
-    });
-    productList.then((result) => {
-      if (id) {
-        const productsFiltered = result.filter((item) => item.category === id);
-        setList(productsFiltered);
-      } else {
-        setList(result);
+    const getItems = async () => {
+      setLoading(true);
+      const db = getFirestore();
+      const itemsCollection = collection(db, "items");
+
+      try {
+        const itemsSnap = await getDocs(itemsCollection);
+        const itemsList = itemsSnap.docs.map((doc) => ({
+          id: doc.id,
+          data: doc.data(),
+        }));
+
+        if (id) {
+          setList(itemsList.filter((item) => item.data.categoryId === id));
+        } else {
+          setList(itemsList);
+        }
+
+        setLoading(false);
+      } catch (error) {
+        console.log("error trying to get the products");
       }
-    });
+    };
+
+    getItems();
   }, [id]);
 
   return (
@@ -34,7 +49,11 @@ export const ItemListContainer = ({ onAdd }) => {
         flexWrap: "wrap",
       }}
     >
-      <ItemList onAdd={onAdd} list={list} />
+      {loading ? (
+        <CircularProgress color="primary" />
+      ) : (
+        <ItemList list={list} />
+      )}
     </Container>
   );
 };

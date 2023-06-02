@@ -2,7 +2,7 @@ import "./ ItemDetail.css";
 import { ItemCount } from "../ItemCount/ItemCount";
 import { Box, Paper } from "@mui/material";
 
-export const ItemDetail = ({ item, onAdd }) => {
+export const ItemDetail = ({ item }) => {
   return (
     <Paper
       className="ItemDetail"
@@ -17,7 +17,7 @@ export const ItemDetail = ({ item, onAdd }) => {
     >
       <Box
         component="img"
-        src={item.img}
+        src={item.data.imageId}
         alt="product in sale"
         sx={{
           objectFit: "cover",
@@ -42,8 +42,8 @@ export const ItemDetail = ({ item, onAdd }) => {
             flexDirection: "column",
           }}
         >
-          <span className="ItemDetail--category">{item.category}</span>
-          <span className="ItemDetail--name">{item.name}</span>
+          <span className="ItemDetail--category">{item.data.categoryId}</span>
+          <span className="ItemDetail--name">{item.data.title}</span>
         </Box>
         <Box
           sx={{
@@ -52,31 +52,26 @@ export const ItemDetail = ({ item, onAdd }) => {
             flexDirection: "column",
           }}
         >
-          <span className="ItemDetail--price">{item.price}€</span>
-          <span className="ItemDetail--stock">stock:{item.stock}</span>
+          <span className="ItemDetail--price">{item.data.price}€</span>
+          <span className="ItemDetail--stock">stock:{item.data.stock}</span>
         </Box>
         <Box
           sx={{
             my: { xs: "20px" },
             px: { xs: "10px" },
             alignSelf: "center",
-            // textAlign: "center",
             lineHeight: "1.6rem",
             letterSpacing: ".1rem",
             width: { md: " 500px", xs: "340px" },
             height: { md: " 220px" },
             maxHeight: { xs: "220px" },
             overflow: "auto",
+            textTransform: "none",
           }}
         >
-          <p>{item.description}</p>
+          <p>{item.data.description}</p>
         </Box>
-        <ItemCount
-          stock={item.stock}
-          onAdd={onAdd}
-          itemName={item.name}
-          category={item.category}
-        />
+        <ItemCount isDetail={true} item={item} />
       </Box>
     </Paper>
   );

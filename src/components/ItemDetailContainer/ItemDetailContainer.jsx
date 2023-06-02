@@ -1,71 +1,56 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import products from "../../data/products.json";
+import { getFirestore, doc, getDoc } from "firebase/firestore";
 import { ItemDetail } from "../ItemDetail/ItemDetail";
 import { Container } from "@mui/material";
-import { IconButton } from "@mui/material";
-import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import CircularProgress from "@mui/material/CircularProgress";
 
-export const ItemDetailContainer = ({ onAdd }) => {
+export const ItemDetailContainer = () => {
   const { id } = useParams();
   const [item, setItem] = useState({});
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const getItem = new Promise((resolve, reject) => {
-      const product = products.find((item) => item.id === Number(id));
-      resolve(product);
-    });
-    getItem.then((result) => setItem(result));
+    const getItem = async () => {
+      setLoading(true);
+      const db = getFirestore();
+      const itemDocRef = doc(db, "items", id);
+
+      try {
+        const itemDocSnap = await getDoc(itemDocRef);
+
+        if (itemDocSnap.exists()) {
+          setItem({ id: itemDocSnap.id, data: itemDocSnap.data() });
+        } else {
+          console.log("The product doesn't exist");
+        }
+
+        setLoading(false);
+      } catch (error) {
+        console.log("error trying to get the product", error);
+      }
+    };
+
+    if (id) {
+      getItem();
+    }
   }, [id]);
-
-  const onNextItem = () => {
-    if (id < products.length) {
-      return `/item/${Number(id) + 1}`;
-    } else {
-      return `/item/${products.length}`;
-    }
-  };
-
-  const onPreviousItem = () => {
-    if (id > 1) {
-      return `/item/${Number(id) - 1}`;
-    } else {
-      return `/item/1`;
-    }
-  };
 
   return (
     <Container
-      fixed
       disableGutters
       sx={{
-        overflow: "auto",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         py: "20px",
       }}
     >
-      <IconButton
-        LinkComponent={Link}
-        to={onPreviousItem()}
-        size="large"
-        sx={{ display: { md: "flex", xs: "none" }, mr: "16px" }}
-        color="secondary"
-      >
-        <ChevronLeftIcon fontSize="large" />
-      </IconButton>
-      <ItemDetail item={item} onAdd={onAdd} />
-      <IconButton
-        size="large"
-        LinkComponent={Link}
-        to={onNextItem()}
-        sx={{ display: { md: "flex", xs: "none" }, ml: "16px" }}
-        color="secondary"
-      >
-        <ChevronRightIcon fontSize="large" />
-      </IconButton>
+      {loading ? (
+        <CircularProgress color="primary" />
+      ) : (
+        <ItemDetail item={item} />
+      )}
     </Container>
   );
 };
