@@ -19,6 +19,7 @@
   color: var(--white);
   text-transform: uppercase;
   animation: fade-in 2s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .Item--category {
