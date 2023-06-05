@@ -48,6 +48,7 @@
   color: var(--light-green);
   cursor: pointer;
   animation: grow 4s ease 0.3s infinite;
+  transition: all 0.3s ease-in-out;
 }
 
 .NavBar--h2:hover {
@@ -71,6 +72,7 @@
   letter-spacing: 1.5px;
   text-transform: uppercase;
   font-size: 0.9rem;
+  transition: all 0.3s ease-in-out;
 }
 
 .NavBar--ul li:hover {
@@ -79,6 +81,7 @@
 
 a {
   color: var(--yellow);
+  transition: all 0.3s ease-in-out;
 }
 
 a:hover {
