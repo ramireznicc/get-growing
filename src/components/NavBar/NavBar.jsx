@@ -11,7 +11,7 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import MenuItem from "@mui/material/MenuItem";
-import products from "../../data/products.json";
+import { getFirestore, collection, getDocs } from "firebase/firestore";
 
 import "./NavBar.css";
 
@@ -19,13 +19,26 @@ export const NavBar = () => {
   const [itemsMenu, setItemsMenu] = useState([]);
 
   useEffect(() => {
-    const productList = new Promise((resolve, reject) => resolve(products));
-    productList.then((result) => {
-      const categories = result.map((item) => item.category);
-      const uniqueCategory = new Set(categories);
+    const getItems = async () => {
+      const db = getFirestore();
+      const itemsCollection = collection(db, "items");
 
-      setItemsMenu(Array.from(uniqueCategory));
-    });
+      try {
+        const itemsSnap = await getDocs(itemsCollection);
+        const itemsList = itemsSnap.docs.map((doc) => ({
+          id: doc.id,
+          data: doc.data(),
+        }));
+        const categories = itemsList.map((item) => item.data.categoryId);
+        const uniqueCategory = new Set(categories);
+
+        setItemsMenu(Array.from(uniqueCategory).sort());
+      } catch (error) {
+        console.log("error trying to get the products");
+      }
+    };
+
+    getItems();
   }, []);
 
   const [anchorElNav, setAnchorElNav] = useState(null);
